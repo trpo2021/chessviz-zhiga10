@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-const int N = 8;
 int main()
 {
-    char A[N][N];
+    char A[8][8];
     int i, j;
 
-    for (i = 0; i < N; i++)
-        for (j = 0; j < N; j++) {
+    for (i = 0; i < 8; i++)
+        for (j = 0; j < 8; j++) {
             A[i][j] = ' ';
             A[1][j] = 'p';
             A[6][j] = 'P';
@@ -29,13 +28,13 @@ int main()
             A[0][6] = 'n';
             A[0][7] = 'r';
         }
-    for (i = 0; i < N; i++) {
-        printf("%d ", N - i);
-        for (j = 0; j < N; j++)
+    for (i = 0; i < 8; i++) {
+        printf("%d ", 8 - i);
+        for (j = 0; j < 8; j++)
             printf("%c ", A[i][j]);
         printf("\n");
     }
     printf("  ");
-    for (i = 0; i < N; i++)
+    for (i = 0; i < 8; i++)
         printf("%c ", 97 + i);
 }
